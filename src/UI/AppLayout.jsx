@@ -4,7 +4,7 @@ import Header from "./Header";
 import Loader from "./Loader";
 import SearchOrder from "../features/order/searchOrder";
 
-function AppLAyout() {
+function AppLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
 
@@ -24,4 +24,4 @@ function AppLAyout() {
   );
 }
 
-export default AppLAyout;
+export default AppLayout;
