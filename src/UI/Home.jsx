@@ -1,13 +1,17 @@
-function Home() {
-  return (
-    <div>
-      <h1 className="font-semibold text-yellow-500 text-xl m-5">
-        The best pizza.
-        <br />
-        Straight out of the oven, straight to you.
-      </h1>
-    </div>
-  );
-}
+  import CreateUser from "../features/user/CreateUser"
 
-export default Home;
+  function Home() {
+    return (
+      <div className="text-center my-10 px-4 sm:my-16">
+        <h1 className="mb-8 text-center font-semibold text-xl mt-10 md:text-3xl">
+          The best pizza.
+          <br />
+          <span className="text-yellow-400">Straight out of the oven, straight to you.</span>
+        </h1>
+
+        <CreateUser />
+      </div>
+    );
+  }
+
+  export default Home;
