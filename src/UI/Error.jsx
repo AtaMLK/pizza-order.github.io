@@ -1,15 +1,20 @@
-import { useNavigate } from 'react-router-dom';
+import { useRouteError } from "react-router-dom";
+import LinkButton from "./LinkButton";
 
-function NotFound() {
-  const navigate = useNavigate();
+function Error() {
+  
+  const error = useRouteError();
+  console.log(error);
 
   return (
-    <div>
+    <div className="h-screen flex flex-col items-center justify-center font-semibold text-3xl px-4">
       <h1>Something went wrong 😢</h1>
-      <p>%MESSAGE%</p>
-      <button onClick={() => navigate(-1)}>&larr; Go back</button>
+      {/*  <p>{`Error ${error.status} Page ${error.statusText} `}</p> */}
+      <p>{error.data || error.message}</p>
+
+      <LinkButton to='-1'>&larr; Go back</LinkButton>
     </div>
   );
 }
 
-export default NotFound;
+export default Error;
