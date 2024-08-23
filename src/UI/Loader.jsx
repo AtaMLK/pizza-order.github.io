@@ -1,5 +1,8 @@
 function Loader() {
-  return <div className="loader"></div>;
+  return <div className="absolute bg-slate-400/20 backdrop-blur-sm  inset-0 flex justify-center items-center">
+
+  <div className="loader"></div>
+  </div>
 }
 
 export default Loader;

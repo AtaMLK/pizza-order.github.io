@@ -10,6 +10,7 @@ function AppLayout() {
   return (
     <div className="grid grid-rows-[auto,1fr,auto] h-screen">
       {isLoading && <Loader />}
+ 
 
       <Header />
 

@@ -1,17 +1,18 @@
-import { useNavigate, useRouteError } from "react-router-dom";
+import { useRouteError } from "react-router-dom";
+import LinkButton from "./LinkButton";
 
 function Error() {
-  const navigate = useNavigate();
+  
   const error = useRouteError();
   console.log(error);
 
   return (
-    <div>
+    <div className="h-screen flex flex-col items-center justify-center font-semibold text-3xl px-4">
       <h1>Something went wrong 😢</h1>
       {/*  <p>{`Error ${error.status} Page ${error.statusText} `}</p> */}
       <p>{error.data || error.message}</p>
 
-      <button onClick={() => navigate(-1)}>&larr; Go back</button>
+      <LinkButton to='-1'>&larr; Go back</LinkButton>
     </div>
   );
 }
