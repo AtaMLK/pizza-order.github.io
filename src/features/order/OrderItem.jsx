@@ -1,15 +1,16 @@
-import { formatCurrency } from '../../utilities/helpers';
+/* eslint-disable react/prop-types */
+import { formatCurrency } from '../../utils/helpers';
 
 function OrderItem({ item, isLoadingIngredients, ingredients }) {
   const { quantity, name, totalPrice } = item;
 
   return (
-    <li>
-      <div>
+    <li className='py-3'>
+      <div className='flex  item-center justify-between text-sm ga[-4'>
         <p>
-          <span>{quantity}&times;</span> {name}
+          <span className='font-bold'>{quantity}&times;</span> {name}
         </p>
-        <p>{formatCurrency(totalPrice)}</p>
+        <p className='font-semibold'>{formatCurrency(totalPrice)}</p>
       </div>
     </li>
   );
