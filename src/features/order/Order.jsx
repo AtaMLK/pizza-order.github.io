@@ -1,14 +1,23 @@
 // Test ID: IIDSAT
 
+<<<<<<< HEAD
 import OrderItem from './OrderItem';
 
 import { useLoaderData } from 'react-router-dom';
 import { getOrder } from '../../services/apiRestaurant';
+=======
+import { useLoaderData } from "react-router-dom";
+import { getOrder } from "../../services/apiRestaurant";
+>>>>>>> e728c5e1ea7a969074703b7d22afe771094b0a48
 import {
   calcMinutesLeft,
   formatCurrency,
   formatDate,
+<<<<<<< HEAD
 } from '../../utils/helpers';
+=======
+} from "../../utils/helpers";
+>>>>>>> e728c5e1ea7a969074703b7d22afe771094b0a48
 
 function Order() {
   const order = useLoaderData();
@@ -47,7 +56,7 @@ function Order() {
         <p className="font-medium">
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
-            : 'Order should have arrived'}
+            : "Order should have arrived"}
         </p>
         <p className="text-xs text-stone-500">
           (Estimated delivery: {formatDate(estimatedDelivery)})
@@ -77,8 +86,11 @@ function Order() {
   );
 }
 
+<<<<<<< HEAD
 
 // eslint-disable-next-line react-refresh/only-export-components
+=======
+>>>>>>> e728c5e1ea7a969074703b7d22afe771094b0a48
 export async function loader({ params }) {
   const order = await getOrder(params.orderId);
   return order;
