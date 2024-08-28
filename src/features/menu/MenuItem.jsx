@@ -15,7 +15,6 @@ function MenuItem({ pizza }) {
 
   const isInCart = CurrnetQuantity > 0
 
-  console.log(CurrnetQuantity)
 
   function handleAddToCart(){
     const newItem = {
